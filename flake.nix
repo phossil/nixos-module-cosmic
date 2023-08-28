@@ -48,7 +48,7 @@
       };
 
       nixosModules.default = import ./module.nix {
-        inherit (nixpkgs) config pkgs libs;
+        inherit (nixpkgs) config pkgs lib;
       };
     };
 }

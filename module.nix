@@ -1,6 +1,14 @@
-{ config, lib, pkgs, ... }:
+inputs: {
+  config,
+  lib,
+  pkgs,
+  options,
+  ...
+}:
 with lib;
 let
+  inherit (pkgs.stdenv.hostPlatform) system;
+
   xcfg = config.services.xserver;
   cfg = xcfg.desktopManager.cosmic;
 in
