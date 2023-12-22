@@ -21,7 +21,7 @@ in
     };
   };
   config = mkIf cfg.enable {
-    #services.xserver.displayManager.sessionPackages = [ pkgs.cosmic-session ];
+    services.xserver.displayManager.sessionPackages = [ pkgs.cosmic-session ];
 
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-cosmic ];
@@ -31,9 +31,12 @@ in
       cosmic-applibrary
       cosmic-bg
       cosmic-comp
+      #cosmic-design-demo
       cosmic-launcher
+      cosmic-notifications
       cosmic-osd
       cosmic-panel
+      #cosmic-screenshot
       cosmic-settings
       cosmic-settings-daemon
     ];
